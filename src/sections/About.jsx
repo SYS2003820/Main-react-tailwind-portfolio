@@ -1,15 +1,18 @@
 import { useRef } from "react";
 import Card from "../components/Card";
-import { Globe } from "../components/globe";
+import { Globe } from "../components/Globe";
 import CopyEmailButton from "../components/CopyEmailButton";
-import { Frameworks } from "../components/FrameWorks";
+import { Frameworks } from "../components/Frameworks"; // ✅ Fixed import path (case-sensitive)
 
 const About = () => {
   const grid2Container = useRef();
+  
   return (
     <section className="c-space section-spacing" id="about">
       <h2 className="text-heading">About Me</h2>
+
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
+        
         {/* Grid 1 */}
         <div className="flex items-end grid-default-color grid-1">
           <img
@@ -22,7 +25,7 @@ const About = () => {
               I’m a Computer Science student and full-stack developer with a passion for building intelligent, scalable web platforms. With hands-on experience in AI, blockchain, and modern web frameworks, I craft reliable and user-centric solutions.
             </p>
           </div>
-          <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
+          <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
 
         {/* Grid 2 */}
@@ -31,54 +34,16 @@ const About = () => {
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full"
           >
-            <p className="flex items-end text-5xl text-gray-500">
-              CODE IS FUN
-            </p>
-            <Card
-              style={{ rotate: "75deg", top: "30%", left: "20%" }}
-              text="Python"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-30deg", top: "60%", left: "45%" }}
-              text="Java"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              text="ReactJS"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="Full Stack"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "20deg", top: "10%", left: "38%" }}
-              text="MERN"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/javascript.svg"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/tailwindcss.svg"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/mongodb.svg"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/java.svg"
-              containerRef={grid2Container}
-            />           
+            <p className="flex items-end text-5xl text-gray-500">CODE IS FUN</p>
+            <Card style={{ rotate: "75deg", top: "30%", left: "20%" }} text="Python" containerRef={grid2Container} />
+            <Card style={{ rotate: "-30deg", top: "60%", left: "45%" }} text="Java" containerRef={grid2Container} />
+            <Card style={{ rotate: "90deg", bottom: "30%", left: "70%" }} text="ReactJS" containerRef={grid2Container} />
+            <Card style={{ rotate: "-45deg", top: "55%", left: "0%" }} text="Full Stack" containerRef={grid2Container} />
+            <Card style={{ rotate: "20deg", top: "10%", left: "38%" }} text="MERN" containerRef={grid2Container} />
+            <Card style={{ rotate: "30deg", top: "70%", left: "70%" }} image="assets/logos/javascript.svg" containerRef={grid2Container} />
+            <Card style={{ rotate: "-45deg", top: "70%", left: "25%" }} image="assets/logos/tailwindcss.svg" containerRef={grid2Container} />
+            <Card style={{ rotate: "-45deg", top: "5%", left: "10%" }} image="assets/logos/mongodb.svg" containerRef={grid2Container} />
+            <Card style={{ rotate: "-45deg", top: "5%", left: "10%" }} image="assets/logos/java.svg" containerRef={grid2Container} />
           </div>
         </div>
 
